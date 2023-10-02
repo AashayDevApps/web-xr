@@ -1,50 +1,35 @@
-<!doctype html><html lang="en"><head><title>Chair</title><meta charset="utf-8"><meta name="description" content="&lt;model-viewer&gt; template"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,
-    body {
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+<!doctype html><html lang="en"><head><title>Chair</title><meta charset="utf-8"><meta name="description" content="&lt;model-viewer&gt; template"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><script defer="defer" src="bundle.js"></script></head><body><div id="webxr"></div><button style="top: 20px; position: absolute;" onclick="loadChair1()">Chair 1</button> <button style="top: 50px; position: absolute;" onclick="loadChair2()">Chair 2</button></body><script>let textureArray = [
 
-    model-viewer {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff;
-    }
+{
+    "name": "Fabric_1",
+    "url": "images/Fabric_1.jpg",
+    "scale": 4
+},
+{
+    "name": "Fabric_2",
+    "url": "images/Fabric_2.jpg",
+    "scale": 2
+},
+{
+    "name": "Fabric_3",
+    "url": "images/Fabric_3.jpg",
+    "scale": 1
+},
+{
+    "name": "Fabric_4",
+    "url": "images/Fabric_4.jpg",
+    "scale": 10
+}
+];
 
-    .progress-bar {
-      display: block;
-      width: 33%;
-      height: 10%;
-      max-height: 2%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      border-radius: 25px;
-      box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+  function loadChair1(){
 
-    .progress-bar.hide {
-      visibility: hidden;
-      transition: visibility 0.3s;
-    }
+    webxr.onInit("./assets/mesh/Chair_New.glb", "webxr", "Chair_Fabric", textureArray);
 
-    .update-bar {
-      background-color: rgba(255, 255, 255, 0.9);
-      width: 0%;
-      height: 100%;
-      border-radius: 25px;
-      float: left;
-      transition: width 0.3s;
-    }
+  }
 
-    .webxr{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }</style><script defer="defer" src="bundle.js"></script></head><body><input id="input_file" type="file" style="top: 30px; left: 30px; position: absolute; z-index: 99;"><div style="position: absolute; z-index: 99; top: 80px; left: 30px;"><span id="texture-scale">Scale:</span> <input type="range" min="1" max="10" value="1" step="1" id="scaleSlider"></div><div id="webxr"></div></body></html>
+  function loadChair2(){
+
+    webxr.onInit("./assets/mesh/Chair_3.glb", "webxr", "Chair", textureArray);
+
+  }</script></html>
