@@ -1,34 +1,54 @@
 <!doctype html><html lang="en"><head><title>Chair</title><meta charset="utf-8"><meta name="description" content="&lt;model-viewer&gt; template"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style/style.css"><script defer="defer" src="bundle.js"></script></head><body><div id="webxr"></div><button style="top: 20px; position: absolute;" onclick="loadChair1()">Chair 1</button> <button style="top: 50px; position: absolute;" onclick="loadChair2()">Chair 2</button></body><script>let textureArray = [
 
-{
-    "name": "Fabric_1",
-    "url": "images/Fabric_1.jpg",
-    "scale": 4
-},
-{
-    "name": "Fabric_2",
-    "url": "images/Fabric_2.jpg",
-    "scale": 2
-},
-{
-    "name": "Fabric_3",
-    "url": "images/Fabric_3.jpg",
-    "scale": 1
-},
-{
-    "name": "Fabric_4",
-    "url": "images/Fabric_4.jpg",
-    "scale": 10
-}
-];
+    {
+      "name": "Fabric_1",
+      "url": "images/Fabric_1.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_2",
+      "url": "images/Fabric_2.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_3",
+      "url": "images/Fabric_3.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_4",
+      "url": "images/Fabric_4.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_5",
+      "url": "images/Fabric_5.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_6",
+      "url": "images/Fabric_6.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_7",
+      "url": "images/Fabric_7.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_8",
+      "url": "images/Fabric_8.jpg",
+      "scale": 4
+    }
+  ];
 
-  function loadChair1(){
+  function loadChair1() {
 
     webxr.onInit("./assets/mesh/Chair_New.glb", "webxr", "Chair_Fabric", textureArray);
 
   }
 
-  function loadChair2(){
+  function loadChair2() {
 
     webxr.onInit("./assets/mesh/Chair_3.glb", "webxr", "Chair", textureArray);
 

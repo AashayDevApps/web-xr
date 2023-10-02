@@ -71,7 +71,7 @@ model-viewer {
 
 .material-image-wrapper div img {
     width: 60px;
-    height: auto;
+    height: 60px;
     border-radius: 50%;
     cursor: pointer;
     margin: 5px;
@@ -80,7 +80,7 @@ model-viewer {
 @media only screen and (min-height: 600px) {
     .material-image-wrapper div img {
         width: 60px;
-        height: auto;
+        height: 60px;
         border-radius: 50%;
         cursor: pointer;
         margin: 5px;
