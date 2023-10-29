@@ -98,3 +98,10 @@ model-viewer {
 #material_collection input:checked+img {
     border: 5px solid black;
 }
+
+.silderMainWrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+}

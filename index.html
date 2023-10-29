@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><title>Chair</title><meta charset="utf-8"><meta name="description" content="&lt;model-viewer&gt; template"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style/style.css"><script defer="defer" src="bundle.js"></script></head><body><div id="webxr"></div></body><script>let textureArray = [
+<!doctype html><html lang="en"><head><title>Chair</title><meta charset="utf-8"><meta name="description" content="&lt;model-viewer&gt; template"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style/style.css"><script defer="defer" src="bundle.js"></script></head><body><div id="webxr"></div><button style="top: 20px; position: absolute;" onclick="loadChair1()">Chair 1</button> <button style="top: 50px; position: absolute;" onclick="loadChair2()">Chair 2</button></body><script>let textureArray = [
 
     {
       "name": "Fabric_1",
@@ -44,12 +44,12 @@
 
   function loadChair1() {
 
-    webxr.onInit("./assets/mesh/Chair_New", "webxr", "Chair_Fabric", textureArray);
+    webxr.onInit("./assets/mesh/Chair_New.glb", "webxr", "Chair_Fabric", textureArray, "floor", true, false);
 
   }
 
   function loadChair2() {
 
-    webxr.onInit("./assets/mesh/Chair_3", "webxr", "Chair", textureArray);
+    webxr.onInit("./assets/mesh/Chair_3_New.glb", "webxr", "Chair", textureArray, "floor", true, true);
 
   }</script></html>
