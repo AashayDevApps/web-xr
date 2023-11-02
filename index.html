@@ -42,9 +42,26 @@
     }
   ];
 
+  let textureArray2 = [
+
+    {
+      "name": "Fabric_1",
+      "url": "https://atelio-test-bucket.s3.ap-south-1.amazonaws.com/uploads/fabrics_thumb/ccghp5oCPpomVXjsURWYCAvGIGaWnNCYb9JfvJMI.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Fabric_2",
+      "url": "https://atelio-test-bucket.s3.ap-south-1.amazonaws.com/uploads/fabrics_thumb/yUg8iIe6Br2Ozc8ajaaMKXvuxexM5eYVtx8epD5p.jpg",
+      "scale": 4
+    }
+  ];
+
+  let modelUrl = "";
+
   function loadChair1() {
 
-    WebAR.init("./assets/mesh/Chair_New.glb", "webar", "Chair_Fabric", textureArray, "floor", true, false);
+    //WebAR.init("./assets/mesh/Chair_New.glb", "webar", "Chair_Fabric", textureArray, "floor", true, false);
+    WebAR.init("https://atelio-test-bucket.s3.ap-south-1.amazonaws.com/meshes/mesh_assets/model/Chair_3_New.glb", "webar", "Chair", textureArray2, "floor", true, true);
   }
 
   function loadChair2() {
