@@ -1,4 +1,61 @@
-<!doctype html><html lang="en"><head><title>Chair</title><meta charset="utf-8"><meta name="description" content="&lt;model-viewer&gt; template"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style/style.css"><script defer="defer" src="bundle.js"></script></head><body><div id="webar"></div></body><script>let textureList = [
+<!doctype html><html lang="en"><head><title>WebAR</title><meta charset="utf-8"><meta name="description" content="&lt;model-viewer&gt; template"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style/style.css"><style>.scenebutton {
+      align-items: center;
+      background-clip: padding-box;
+      background-color: #fa6400;
+      border: 1px solid transparent;
+      border-radius: .25rem;
+      box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      justify-content: center;
+      line-height: 1.25;
+      margin: 0;
+      height: 40px;
+      padding: 5px;
+      position: relative;
+      text-decoration: none;
+      transition: all 250ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: baseline;
+      width: 100px;
+      margin: 4px;
+    }
+
+    .scenebutton:hover,
+    .scenebutton:focus {
+      background-color: #fb8332;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    }
+
+    .scenebutton:hover {
+      transform: translateY(-1px);
+    }
+
+    .scenebutton:active {
+      background-color: #c85000;
+      box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+      transform: translateY(0);
+    }
+
+    .scenedata{
+      position: absolute; 
+      display: flex; 
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+      width: 100%; 
+      height: 100px;
+      z-index: 9; 
+      top: 10px;
+    }</style><script defer="defer" src="bundle.js"></script></head><body><div class="scenedata"><button class="scenebutton" onclick="LoadScene('Chair')" role="button">Chair</button> <button class="scenebutton" onclick="LoadScene('Curtain')" role="button">Curtain</button></div><div id="webar"></div></body><script>let textureList = [
     {
       "name": "Fabric_1",
       "url": "images/Fabric_1.jpg",
@@ -41,7 +98,16 @@
     }
   ];
 
+  function LoadScene(name){
+
+    if(name == 'Chair')
+      WebAR.init("./assets/mesh/Chair_3_New.glb", "webar", "Chair", textureList, "floor", true, true);
+    else if(name == 'Curtain')
+      WebAR.init("./assets/mesh/Curtains.glb", "webar", "Material #541", textureList, "wall", true, true);
+
+  }
+
   window.addEventListener("DOMContentLoaded", () => {
     //WebAR.init("./assets/mesh/Chair_3_New.glb", "webar", "Chair", textureList, "floor", true, true);
-    WebAR.init("./assets/mesh/Curtains.glb", "webar", "Material #541", textureList, "wall", true, true);
+    //WebAR.init("./assets/mesh/Curtains.glb", "webar", "Material #541", textureList, "wall", true, true);
   });</script></html>
