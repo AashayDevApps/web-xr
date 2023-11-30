@@ -91,6 +91,31 @@ model-viewer {
     text-align: center;
 }
 
+#material_collection {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: auto;
+    height: 90px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#material_collection label{
+    min-width: fit-content;
+}
+
+#material_collection::-webkit-scrollbar {
+    height: 10px;
+    background-color:#000;
+}
+
+#material_collection::-webkit-scrollbar-thumb {
+    height: 5px;
+    background-color:#fa6400;
+}
+
 #material_collection input {
     display: none;
 }
