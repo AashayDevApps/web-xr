@@ -77,6 +77,11 @@ model-viewer {
     margin: 5px;
 }
 
+.material-image-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (min-height: 600px) {
     .material-image-wrapper div img {
         width: 60px;
@@ -97,9 +102,8 @@ model-viewer {
     overflow-y: hidden;
     scroll-behavior: auto;
     height: 90px;
-    width: 100%;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: start;
 }
 
 #material_collection label{
