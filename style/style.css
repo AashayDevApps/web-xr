@@ -130,7 +130,8 @@ model-viewer {
 
 .silderMainWrapper{
     position: relative;
-    display: flex;
+    display: block;
     justify-content: center;
+    text-align: center;
     top: 20px;
 }
