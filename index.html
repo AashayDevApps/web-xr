@@ -56,7 +56,7 @@
       height: 100px;
       z-index: 9;
       top: 10px;
-    }</style><script defer="defer" src="bundle.js"></script></head><body><div class="scenedata"><button class="scenebutton" onclick="LoadScene('Chair')" role="button">Chair</button> <button class="scenebutton" onclick="LoadScene('Curtain')" role="button">Regular Curtain</button> <button class="scenebutton" onclick="LoadScene('SheerCurtain')" role="button">Sheer Curtain</button></div><div id="webar"></div></body><script>let textureList = [
+    }</style><script defer="defer" src="bundle.js"></script></head><body><div class="scenedata"><button class="scenebutton" onclick="LoadScene('Chair')" role="button">Chair</button> <button class="scenebutton" onclick="LoadScene('Curtain')" role="button">Regular Curtain</button> <button class="scenebutton" onclick="LoadScene('SheerCurtain')" role="button">Sheer Curtain</button> <button class="scenebutton" onclick="LoadScene('Blinds')" role="button">Blinds</button></div><div id="webar"></div></body><script>let textureList = [
     {
       "name": "1M0A6677_crop",
       "url": "images/opaque/1M0A6677_crop.jpg",
@@ -147,6 +147,59 @@
     }
   ]
 
+  let blindsTextureList = [
+    {
+      "name": "MYTH 62607",
+      "url": "images/blinds/MYTH 62607.jpg",
+      "scale": 4
+    },
+    {
+      "name": "MYTH 62612",
+      "url": "images/blinds/MYTH 62612.jpg",
+      "scale": 4
+    },
+    {
+      "name": "MYTH 62618",
+      "url": "images/blinds/MYTH 62618.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Q0795D000907S006",
+      "url": "images/blinds/Q0795D000907S006.jpg",
+      "scale": 4
+    },
+    {
+      "name": "Q2307D004502S006",
+      "url": "images/blinds/Q2307D004502S006.jpg",
+      "scale": 4
+    },
+    {
+      "name": "QNJMK4512RS4019D",
+      "url": "images/blinds/QNJMK4512RS4019D.jpg",
+      "scale": 4
+    },
+    {
+      "name": "QNLMK4658RS4034G",
+      "url": "images/blinds/QNLMK4658RS4034G.jpg",
+      "scale": 4
+    },
+    {
+      "name": "QNLMK4658RS4048D",
+      "url": "images/blinds/QNLMK4658RS4048D.jpg",
+      "scale": 4
+    },
+    {
+      "name": "SAXON 30674",
+      "url": "images/blinds/SAXON 30674.jpg",
+      "scale": 4
+    },
+    {
+      "name": "SAXON 55913",
+      "url": "images/blinds/SAXON 55913.jpg",
+      "scale": 4
+    }
+  ];
+
   function LoadScene(name) {
 
     if (name == 'Chair') {
@@ -168,6 +221,13 @@
       function onLoad() {
         console.log("Loaded");
         createTextureUI(sheerTextureList, true, true, true);
+      }
+    }
+    else if (name == 'Blinds') {
+      WebAR.init("./assets/mesh/Blinds.glb", "webar", "Fabric Linen", blindsTextureList, "wall", onLoad);
+      function onLoad() {
+        console.log("Loaded");
+        createTextureUI(blindsTextureList, true, true, false);
       }
     }
   }
